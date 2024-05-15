@@ -1,5 +1,5 @@
 ﻿namespace CurrencyConverter;
 
-public class Main
+internal static class Main
 {
 }
