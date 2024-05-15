@@ -1,4 +1,4 @@
-﻿namespace CurrencyConverter;
+﻿namespace CurrencyConverter.CurrencyConverter;
 
 internal static class CurrencyData
 {

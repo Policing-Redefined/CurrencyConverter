@@ -1,6 +1,6 @@
-﻿using static CurrencyConverter.CurrencyData;
+﻿using static CurrencyConverter.CurrencyConverter.CurrencyData;
 
-namespace CurrencyConverter;
+namespace CurrencyConverter.CurrencyConverter;
 
 public static class ConversionMethods
 {
