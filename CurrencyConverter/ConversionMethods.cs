@@ -14,7 +14,7 @@ public static class ConversionMethods
     internal static double ConvertFromUSD(string currencyToConvertTo, double amountToConvert)
     {
         double currencyWorth;
-        if (!Currencies.TryGetValue(currencyToConvertTo, out currencyWorth)) return 0;
+        if (!Currencies.TryGetValue(currencyToConvertTo, out currencyWorth)) throw new CurrencyInvalidException($"Currency {currencyToConvertTo} is not registered/valid!");
         return amountToConvert * currencyWorth;
     }
     
@@ -29,7 +29,7 @@ public static class ConversionMethods
     internal static double ConvertToUSD(string currencyToConvertFrom, double amountToConvert)
     {
         double currencyWorth;
-        if (!Currencies.TryGetValue(currencyToConvertFrom, out currencyWorth)) return 0;
+        if (!Currencies.TryGetValue(currencyToConvertFrom, out currencyWorth)) throw new CurrencyInvalidException($"Currency {currencyToConvertFrom} is not registered/valid!");
         return amountToConvert / currencyWorth;
     }
 }
